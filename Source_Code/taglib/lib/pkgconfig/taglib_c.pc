@@ -1,0 +1,12 @@
+prefix=/usr/local/taglib_1_11_1
+exec_prefix=/usr/local/taglib_1_11_1
+libdir=/usr/local/taglib_1_11_1/lib
+includedir=/usr/local/taglib_1_11_1/include
+
+
+Name: TagLib C Bindings
+Description: Audio meta-data library (C bindings)
+Requires: taglib
+Version: 1.11.1
+Libs: -L/usr/local/taglib_1_11_1/lib -ltag_c
+Cflags: -I/usr/local/taglib_1_11_1/include/taglib 

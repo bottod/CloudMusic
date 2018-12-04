@@ -1,0 +1,11 @@
+prefix=/usr/local/taglib_1_11_1
+exec_prefix=/usr/local/taglib_1_11_1
+libdir=/usr/local/taglib_1_11_1/lib
+includedir=/usr/local/taglib_1_11_1/include
+
+Name: TagLib
+Description: Audio meta-data library
+Requires: 
+Version: 1.11.1
+Libs: -L${libdir} -ltag
+Cflags: -I${includedir}/taglib
