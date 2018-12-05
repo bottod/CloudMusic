@@ -64,7 +64,7 @@ namespace TagLib {
       /*!
        * Returns the version number.  (Note: This is the 1000 or 2000.)
        */
-      unsigned int version() const;
+      uint version() const;
 
       /*!
        * Returns true if a header is present in the tag.
@@ -89,13 +89,13 @@ namespace TagLib {
       /*!
        * Returns the number of items in the tag.
        */
-      unsigned int itemCount() const;
+      uint itemCount() const;
 
       /*!
        * Set the item count to \a s.
        * \see itemCount()
        */
-      void setItemCount(unsigned int s);
+      void setItemCount(uint s);
 
       /*!
        * Returns the tag size in bytes.  This is the size of the frame content and footer.
@@ -103,7 +103,7 @@ namespace TagLib {
        *
        * \see completeTagSize()
        */
-      unsigned int tagSize() const;
+      uint tagSize() const;
 
       /*!
        * Returns the tag size, including if present, the header
@@ -111,18 +111,18 @@ namespace TagLib {
        *
        * \see tagSize()
        */
-      unsigned int completeTagSize() const;
+      uint completeTagSize() const;
 
       /*!
        * Set the tag size to \a s.
        * \see tagSize()
        */
-      void setTagSize(unsigned int s);
+      void setTagSize(uint s);
 
       /*!
        * Returns the size of the footer.  Presently this is always 32 bytes.
        */
-      static unsigned int size();
+      static uint size();
 
       /*!
        * Returns the string used to identify an APE tag inside of a file.

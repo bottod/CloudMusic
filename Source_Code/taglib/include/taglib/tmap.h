@@ -119,7 +119,7 @@ namespace TagLib {
      *
      * \see isEmpty()
      */
-    unsigned int size() const;
+    uint size() const;
 
     /*!
      * Returns true if the map is empty.

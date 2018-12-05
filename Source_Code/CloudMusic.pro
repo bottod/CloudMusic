@@ -7,9 +7,8 @@ TEMPLATE = app
 
 RC_ICONS = Desktopico.ico
 
-LIBS += ../taglib/lib/libtag.so
-
-LIBS += ../taglib/lib/libtag_c.so
+LIBS += ../taglib/lib/libtag.dll.a
+LIBS += ../taglib/lib/libtag_c.dll.a
 
 INCLUDEPATH += ./taglib/include/taglib
 

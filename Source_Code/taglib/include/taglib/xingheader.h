@@ -93,12 +93,12 @@ namespace TagLib {
       /*!
        * Returns the total number of frames.
        */
-      unsigned int totalFrames() const;
+      uint totalFrames() const;
 
       /*!
        * Returns the total size of stream in bytes.
        */
-      unsigned int totalSize() const;
+      uint totalSize() const;
 
       /*!
        * Returns the type of the VBR header.

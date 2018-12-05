@@ -95,7 +95,7 @@ namespace TagLib {
        *
        * \see childElements()
        */
-      unsigned int entryCount() const;
+      uint entryCount() const;
 
       /*!
        * Returns list of child elements of the frame.

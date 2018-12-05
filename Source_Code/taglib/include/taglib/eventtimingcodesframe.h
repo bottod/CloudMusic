@@ -108,8 +108,8 @@ namespace TagLib {
        * Single entry of time stamp and event.
        */
       struct SynchedEvent {
-        SynchedEvent(unsigned int ms, EventType t) : time(ms), type(t) {}
-        unsigned int time;
+        SynchedEvent(uint ms, EventType t) : time(ms), type(t) {}
+        uint time;
         EventType type;
       };
 

@@ -1,11 +1,11 @@
-prefix=/usr/local/taglib_1_11_1
-exec_prefix=/usr/local/taglib_1_11_1
-libdir=/usr/local/taglib_1_11_1/lib
-includedir=/usr/local/taglib_1_11_1/include
+prefix=C:/Program Files (x86)/taglib
+exec_prefix=C:/Program Files (x86)/taglib
+libdir=C:/Program Files (x86)/taglib/lib
+includedir=C:/Program Files (x86)/taglib/include
 
 Name: TagLib
 Description: Audio meta-data library
 Requires: 
-Version: 1.11.1
-Libs: -L${libdir} -ltag
-Cflags: -I${includedir}/taglib
+Version: 1.10
+Libs: -LC:/Program Files (x86)/taglib/lib -ltag
+Cflags: -IC:/Program Files (x86)/taglib/include/taglib 

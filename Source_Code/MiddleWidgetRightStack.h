@@ -22,9 +22,9 @@
 #include <QCryptographicHash>
 
 //TagLib
-#include <taglib/fileref.h>
-#include <taglib/tag.h>
-#include <taglib/toolkit/tpropertymap.h>
+#include <fileref.h>
+#include <tag.h>
+#include <tpropertymap.h>
 
 #include "ListWidgetFindMusic.h"
 #include "ListWidgetLocalMusic.h"

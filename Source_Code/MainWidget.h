@@ -23,9 +23,9 @@
 #include "SkinWidget.h"
 #include "TurntableWidget.h"
 
-#include <taglib/mpeg/mpegfile.h>
-#include <taglib/mpeg/id3v2/id3v2tag.h>
-#include <taglib/mpeg/id3v2/frames/attachedpictureframe.h>
+#include <mpegfile.h>
+#include <id3v2tag.h>
+#include <attachedpictureframe.h>
 
 class MainWidget : public FramelessWidget
 {

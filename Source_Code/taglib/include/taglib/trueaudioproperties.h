@@ -38,7 +38,7 @@ namespace TagLib {
 
     class File;
 
-    static const unsigned int HeaderSize = 18;
+    static const uint HeaderSize = 18;
 
     //! An implementation of audio property reading for TrueAudio
 
@@ -111,7 +111,7 @@ namespace TagLib {
       /*!
        * Returns the total number of sample frames
        */
-      unsigned int sampleFrames() const;
+      uint sampleFrames() const;
 
       /*!
        * Returns the major version number.

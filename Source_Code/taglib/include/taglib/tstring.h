@@ -86,8 +86,8 @@ namespace TagLib {
   public:
 
 #ifndef DO_NOT_DOCUMENT
-    typedef TagLib::wstring::iterator Iterator;
-    typedef TagLib::wstring::const_iterator ConstIterator;
+    typedef std::basic_string<wchar>::iterator Iterator;
+    typedef std::basic_string<wchar>::const_iterator ConstIterator;
 #endif
 
     /**
@@ -291,18 +291,13 @@ namespace TagLib {
      * Extract a substring from this string starting at \a position and
      * continuing for \a n characters.
      */
-    String substr(unsigned int position, unsigned int n = 0xffffffff) const;
+    String substr(uint position, uint n = 0xffffffff) const;
 
     /*!
      * Append \a s to the current string and return a reference to the current
      * string.
      */
     String &append(const String &s);
-
-    /*!
-     * Clears the string.
-     */
-    String &clear();
 
     /*!
      * Returns an upper case version of the string.
@@ -314,12 +309,12 @@ namespace TagLib {
     /*!
      * Returns the size of the string.
      */
-    unsigned int size() const;
+    uint size() const;
 
     /*!
      * Returns the length of the string.  Equivalent to size().
      */
-    unsigned int length() const;
+    uint length() const;
 
     /*!
      * Returns true if the string is empty.
@@ -332,14 +327,9 @@ namespace TagLib {
      * Returns true if this string is null -- i.e. it is a copy of the
      * String::null string.
      *
-     * \note A string can be empty and not null.  So do not use this method to
-     * check if the string is empty.
-     *
+     * \note A string can be empty and not null.
      * \see isEmpty()
-     *
-     * \deprecated
      */
-     // BIC: remove
     bool isNull() const;
 
     /*!
@@ -395,12 +385,12 @@ namespace TagLib {
     /*!
      * Returns a reference to the character at position \a i.
      */
-    wchar_t &operator[](int i);
+    wchar &operator[](int i);
 
     /*!
      * Returns a const reference to the character at position \a i.
      */
-    const wchar_t &operator[](int i) const;
+    const wchar &operator[](int i) const;
 
     /*!
      * Compares each character of the String with each character of \a s and
@@ -505,11 +495,6 @@ namespace TagLib {
     String &operator=(const ByteVector &v);
 
     /*!
-     * Exchanges the content of the String by the content of \a s.
-     */
-    void swap(String &s);
-
-    /*!
      * To be able to use this class in a Map, this operator needed to be
      * implemented.  Returns true if \a s is less than this string in a byte-wise
      * comparison.
@@ -518,13 +503,7 @@ namespace TagLib {
 
     /*!
      * A null string provided for convenience.
-     *
-     * \warning Do not modify this variable.  It will mess up the internal state
-     * of TagLib.
-     *
-     * \deprecated
      */
-     // BIC: remove
     static String null;
 
   protected:
@@ -537,10 +516,34 @@ namespace TagLib {
 
   private:
     /*!
-     * \deprecated This variable is no longer used, but NEVER remove this. It
-     * may lead to a linkage error.
+     * Converts a \e Latin-1 string into \e UTF-16(without BOM/CPU byte order)
+     * and copies it to the internal buffer.
      */
-     // BIC: remove
+    void copyFromLatin1(const char *s, size_t length);
+
+    /*!
+     * Converts a \e UTF-8 string into \e UTF-16(without BOM/CPU byte order)
+     * and copies it to the internal buffer.
+     */
+    void copyFromUTF8(const char *s, size_t length);
+
+    /*!
+     * Converts a \e UTF-16 (with BOM), UTF-16LE or UTF16-BE string into
+     * \e UTF-16(without BOM/CPU byte order) and copies it to the internal buffer.
+     */
+    void copyFromUTF16(const wchar_t *s, size_t length, Type t);
+
+    /*!
+     * Converts a \e UTF-16 (with BOM), UTF-16LE or UTF16-BE string into
+     * \e UTF-16(without BOM/CPU byte order) and copies it to the internal buffer.
+     */
+    void copyFromUTF16(const char *s, size_t length, Type t);
+
+    /*!
+     * Indicates which byte order of UTF-16 is used to store strings internally.
+     *
+     * \note \e String::UTF16BE or \e String::UTF16LE
+     */
     static const Type WCharByteOrder;
 
     class StringPrivate;

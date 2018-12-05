@@ -118,7 +118,7 @@ namespace TagLib {
       /*!
        * Returns the total number of audio samples in file.
        */
-      unsigned int sampleFrames() const;
+      uint sampleFrames() const;
 
       /*!
        * Returns APE version.

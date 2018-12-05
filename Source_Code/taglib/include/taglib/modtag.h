@@ -5,7 +5,7 @@
 
 /***************************************************************************
  *   This library is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU Lesser General Public License version   *
+ *   it  under the terms of the GNU Lesser General Public License version  *
  *   2.1 as published by the Free Software Foundation.                     *
  *                                                                         *
  *   This library is distributed in the hope that it will be useful, but   *
@@ -15,12 +15,8 @@
  *                                                                         *
  *   You should have received a copy of the GNU Lesser General Public      *
  *   License along with this library; if not, write to the Free Software   *
- *   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA         *
- *   02110-1301  USA                                                       *
- *                                                                         *
- *   Alternatively, this file is available under the Mozilla Public        *
- *   License Version 1.1.  You may obtain a copy of the License at         *
- *   http://www.mozilla.org/MPL/                                           *
+ *   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            *
+ *   MA  02110-1301  USA                                                   *
  ***************************************************************************/
 
 #ifndef TAGLIB_MODTAG_H
@@ -54,39 +50,39 @@ namespace TagLib {
        * Returns the track name; if no track name is present in the tag
        * String::null will be returned.
        */
-      virtual String title() const;
+      String title() const;
 
       /*!
        * Not supported by module files.  Therefore always returns String::null.
        */
-      virtual String artist() const;
+      String artist() const;
 
       /*!
        * Not supported by module files.  Therefore always returns String::null.
        */
-      virtual String album() const;
+      String album() const;
 
       /*!
        * Returns the track comment derived from the instrument/sample/pattern
        * names; if no comment is present in the tag String::null will be
        * returned.
        */
-      virtual String comment() const;
+      String comment() const;
 
       /*!
        * Not supported by module files.  Therefore always returns String::null.
        */
-      virtual String genre() const;
+      String genre() const;
 
       /*!
        * Not supported by module files.  Therefore always returns 0.
        */
-      virtual unsigned int year() const;
+      uint year() const;
 
       /*!
        * Not supported by module files.  Therefore always returns 0.
        */
-      virtual unsigned int track() const;
+      uint track() const;
 
       /*!
        * Returns the name of the tracker used to create/edit the module file.
@@ -105,17 +101,17 @@ namespace TagLib {
        * Mod 20 characters, S3M 27 characters, IT 25 characters and XM 20
        * characters.
        */
-      virtual void setTitle(const String &title);
+      void setTitle(const String &title);
 
       /*!
        * Not supported by module files and therefore ignored.
        */
-      virtual void setArtist(const String &artist);
+      void setArtist(const String &artist);
 
       /*!
        * Not supported by module files and therefore ignored.
        */
-      virtual void setAlbum(const String &album);
+      void setAlbum(const String &album);
 
       /*!
        * Sets the comment to \a comment.  If \a comment is String::null then
@@ -134,22 +130,22 @@ namespace TagLib {
        * Mod 22 characters, S3M 27 characters, IT 25 characters and XM 22
        * characters.
        */
-      virtual void setComment(const String &comment);
+      void setComment(const String &comment);
 
       /*!
        * Not supported by module files and therefore ignored.
        */
-      virtual void setGenre(const String &genre);
+      void setGenre(const String &genre);
 
       /*!
        * Not supported by module files and therefore ignored.
        */
-      virtual void setYear(unsigned int year);
+      void setYear(uint year);
 
       /*!
        * Not supported by module files and therefore ignored.
        */
-      virtual void setTrack(unsigned int track);
+      void setTrack(uint track);
 
       /*!
        * Sets the tracker name to \a trackerName.  If \a trackerName is

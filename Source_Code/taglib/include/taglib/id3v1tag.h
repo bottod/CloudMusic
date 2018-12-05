@@ -140,23 +140,23 @@ namespace TagLib {
       virtual String album() const;
       virtual String comment() const;
       virtual String genre() const;
-      virtual unsigned int year() const;
-      virtual unsigned int track() const;
+      virtual TagLib::uint year() const;
+      virtual TagLib::uint track() const;
 
       virtual void setTitle(const String &s);
       virtual void setArtist(const String &s);
       virtual void setAlbum(const String &s);
       virtual void setComment(const String &s);
       virtual void setGenre(const String &s);
-      virtual void setYear(unsigned int i);
-      virtual void setTrack(unsigned int i);
+      virtual void setYear(TagLib::uint i);
+      virtual void setTrack(TagLib::uint i);
 
       /*!
        * Returns the genre in number.
        *
        * \note Normally 255 indicates that this tag contains no genre.
        */
-      unsigned int genreNumber() const;
+      TagLib::uint genreNumber() const;
 
       /*!
        * Sets the genre in number to \a i.
@@ -164,7 +164,7 @@ namespace TagLib {
        * \note Valid value is from 0 up to 255. Normally 255 indicates that
        * this tag contains no genre.
        */
-      void setGenreNumber(unsigned int i);
+      void setGenreNumber(TagLib::uint i);
 
       /*!
        * Sets the string handler that decides how the ID3v1 data will be

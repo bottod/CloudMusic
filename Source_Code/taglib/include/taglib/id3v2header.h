@@ -67,7 +67,7 @@ namespace TagLib {
        * Returns the major version number.  (Note: This is the 4, not the 2 in
        * ID3v2.4.0.  The 2 is implied.)
        */
-      unsigned int majorVersion() const;
+      uint majorVersion() const;
 
       /*!
        * Set the the major version number to \a version.  (Note: This is
@@ -78,13 +78,13 @@ namespace TagLib {
        * version which is written and in general should not be called by API
        * users.
        */
-      void setMajorVersion(unsigned int version);
+      void setMajorVersion(uint version);
 
       /*!
        * Returns the revision number.  (Note: This is the 0, not the 4 in
        * ID3v2.4.0.  The 2 is implied.)
        */
-      unsigned int revisionNumber() const;
+      uint revisionNumber() const;
 
       /*!
        * Returns true if unsynchronisation has been applied to all frames.
@@ -116,7 +116,7 @@ namespace TagLib {
        *
        * \see completeTagSize()
        */
-      unsigned int tagSize() const;
+      uint tagSize() const;
 
       /*!
        * Returns the tag size, including the header and, if present, the footer
@@ -124,18 +124,18 @@ namespace TagLib {
        *
        * \see tagSize()
        */
-      unsigned int completeTagSize() const;
+      uint completeTagSize() const;
 
       /*!
        * Set the tag size to \a s.
        * \see tagSize()
        */
-      void setTagSize(unsigned int s);
+      void setTagSize(uint s);
 
       /*!
        * Returns the size of the header.  Presently this is always 10 bytes.
        */
-      static unsigned int size();
+      static uint size();
 
       /*!
        * Returns the string used to identify and ID3v2 tag inside of a file.

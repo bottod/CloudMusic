@@ -150,7 +150,7 @@ Map<Key, T> &Map<Key,T>::erase(const Key &key)
 }
 
 template <class Key, class T>
-unsigned int Map<Key, T>::size() const
+TagLib::uint Map<Key, T>::size() const
 {
   return d->map.size();
 }
