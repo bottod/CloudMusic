@@ -871,7 +871,7 @@ void MainWidget::slot_PlayLocalMusic(QTableWidgetItem* tableItem)
         m_MiddleWidget->m_PlaySongInfoWidget->cdLabel->setPixmap(photo);
         photo = photo.scaled(42,42,Qt::KeepAspectRatio);
         m_MiniWidget->m_photoLabel->setPixmap(photo);
-        photo = photo.scaled(150,150,Qt::KeepAspectRatio);
+        photo.loadFromData(reinterpret_cast<const uchar*>(picFrame->picture().data()), picFrame->picture().size());
         m_turntableWidget->pix_cd = photo; m_turntableWidget->update();
     }
 
@@ -947,6 +947,7 @@ void MainWidget::slot_playNext()
             m_MiddleWidget->m_PlaySongInfoWidget->cdLabel->setPixmap(photo);
             photo = photo.scaled(42,42,Qt::KeepAspectRatio);
             m_MiniWidget->m_photoLabel->setPixmap(photo);
+            photo.loadFromData(reinterpret_cast<const uchar*>(picFrame->picture().data()), picFrame->picture().size());
             m_turntableWidget->pix_cd = photo; m_turntableWidget->update();
         }
     }
